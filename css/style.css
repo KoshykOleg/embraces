@@ -110,71 +110,12 @@ a {
   width: 100%;
 }
 
-/* .heder {
-	display: flex;
-	padding: 5px 0;
-	align-items: center;
-	width: 100%;
-}
-.heder__body {
-	display: flex;
-	justify-content: center;
-	margin: o auto;
-	flex-wrap:wrap;
-	width: 100%;
-}
-.heder__row {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap:wrap;
-	width: 100%;;
-	margin: 0 10px;
-}
-.heder__left {
-	display: flex;
-	flex-wrap:wrap;
-	flex: 0 0 auto;
-	margin: 5px 10px 5px 10px;
-	padding: 0 10px 0 10px;
-}
-.heder__left img {
-	max-width: 184px;
-}	
-.heder__center{
-	display: flex;
-	margin: 0 10px 0 10px;
-}
-.heder__list {
-	display: flex;
-	flex-wrap:wrap;
-	justify-content: center;
-	font-size: 13px;
-	font-weight: 400;
-	margin: 20px 10px 20px 10px;
-}
-.heder__list li a {
-	text-decoration: none;
-	display: flex;
-	flex-wrap:wrap;
-	margin-right: 20px;
-	padding: 1px 1px 1px 1px;
-	margin: 5px 10px 5px 10px;
-	white-space: nowrap;
-	&:hover{
-		text-decoration: none;
-		color: #0071BC;
-		transform: scale(1.1);
-		transition: all .3s;
-		border-bottom: 1px solid #0071BC;
-	}
-} */
 .header {
   position: relative;
   width: 100%;
   top: 0px;
   left: 0;
-  padding: 0 28px;
+  padding: 0 18px;
   z-index: 50;
 }
 
@@ -201,11 +142,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header__logo {
   position: relative;
   z-index: 3;
+  margin: 10px 10px 10px 10px;
 }
 
 .header__logo img {
@@ -229,9 +173,6 @@ a {
   list-style: none;
   margin: 0 0 0 20px;
   white-space: nowrap;
-  /* 	&:first-child {
-  		margin:0 0 0 10px;
-  	} */
 }
 .header__list li:hover {
   -webkit-transform: scale(1.1);
@@ -368,8 +309,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   z-index: 5;
 }
 
@@ -401,7 +340,7 @@ a {
   font-size: 15px;
   background-color: #FFD955;
   border-radius: 50px;
-  margin: 10px 10px 10px 10px;
+  margin: 10px 20px 10px 10px;
   padding: 14px 35px;
   letter-spacing: 1px;
 }
@@ -789,6 +728,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background: #0071BC;
+  padding-bottom: 10px;
 }
 
 .participation__row {
@@ -2788,5 +2728,16 @@ a {
   ._line {
     width: 100%;
     padding: 10px 20px 10px 20px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .header::before {
+    height: 110px;
+  }
+
+  .heder__right {
+    position: absolute;
+    right: -5px;
+    top: 55px;
   }
 }
