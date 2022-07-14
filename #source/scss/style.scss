@@ -322,6 +322,7 @@ a {
 }
 .telegram img{
 	padding: 3px 3px 3px 2px;
+	
 	&:hover{
 	padding: 3px;
 	transform: scale(1.1);
@@ -436,6 +437,7 @@ a {
 .participation__images {
 	display: flex;
 	flex-wrap:wrap;
+	margin-bottom: -1px;
 }
 .participation__images img {
 	width: 33.333%;
@@ -913,7 +915,11 @@ a {
 .support__bottom {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0 30px ;
+	padding: 0 30px;
+
+	@media all and (max-width: 767px) {
+		padding: 0;
+	}
 }
 .support__bottom_row {
 	display: flex;
@@ -953,9 +959,7 @@ a {
 	padding: 5px;
 	margin: 5px;
 }
-.support__sum p{
-	color: #646464;
-}
+
 .support__sum_item {
 	display: flex;
 	justify-content: space-between;
@@ -963,24 +967,29 @@ a {
 	border-radius: 7px;
 	padding: 12px 14px;
 	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: background-color 180ms, color 180ms;
+
+	p {
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		transition: color 180ms;
+		color: #646464;
+		cursor: inherit;
+	}
+
 	&:hover{
+		background-color: #0071BC;
+		transition: background-color 180ms;
+
 		p {
 			color:#fff;
+			transition: color 180ms;
 		}
-		background-color: #0071BC;
-		color: #fff;
 	}
 }
-.support__sum_item p{
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 1px;
-	&:hover{
-		color: #fff;
-	}
-}
-.support__sum_form {
-}
+
 .support__sum_form input{
 	border-bottom: 1px solid #646464;
 	font-size: 15px;
@@ -1041,33 +1050,36 @@ a {
 	align-items:center;
 	border-radius: 10px;
 	background-color: #fff;
+	transition: background-color 180ms;
 	height: 50%;
 	padding: 0 0 40px 0;
 	margin: 5px 4px;
+
+	a p{
+		display: flex;
+		flex-direction: column;
+		align-items:center;
+		justify-content: center;
+		border: 2px solid black;
+		border-radius: 50px;
+		padding: 15px 30px;
+		text-align: center;
+		transition: border 180ms;
+	}
+
 	&:hover {
 		background-color: #0071BC;
+		transition: background-color 180ms;
 		color: #fff;
-		margin: 2px 4px;
+
+		a p{
+			color: #fff;
+			border: 2px solid transparent;
+			transition: border 180ms;
+		}
 	}
-	&:hover a p{
-		color: #fff;
-		border: none;
-		text-decoration: n;
-		border-radius: 0px;
-		margin: 16px 30px;
-		padding: 0;
-	}
-	}
-.support__right_block a p{
-	display: flex;
-	flex-direction: column;
-	align-items:center;
-	justify-content: center;
-	border: 2px solid black;
-	border-radius: 50px;
-	padding: 15px 30px;
-	text-align: center;
 }
+
 .support__titles {
 	font-size: 25px;
 	font-weight: 400;
@@ -1564,6 +1576,11 @@ position: relative;
 	line-height: 20px;
 	color: #fff;
 	width: 360px;
+	
+	@media all and (max-width: 767px) {
+		width: 100%;
+		text-align: center;
+	}
 }
 .footer__copyright a{
 	font-weight: 900;
