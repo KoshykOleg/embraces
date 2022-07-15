@@ -1536,16 +1536,18 @@ position: relative;
 }
 .partners__logo img{
 }
-
+.to_top_conteiner{
+	position: relative;
+}
 .to_top {
 	position: absolute;
 	right: 30px;
-	bottom: 350px;
+	bottom: 130px;
 	position: fixed;
 /* 	display: none; */
 }
 .to_top img{
-	width: 60px;
+	width: 50px;
 }
 
 .footer {
