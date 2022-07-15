@@ -5,6 +5,8 @@
 }
 
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -62,6 +64,7 @@ ul li {
 
 img {
   vertical-align: top;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
