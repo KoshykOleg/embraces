@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 body, html {
   max-height: 100%;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -471,6 +472,10 @@ a {
   line-height: 20px;
   margin: 15px 15px 15px 15px;
   padding: 10px;
+}
+
+.contacts__phone a {
+  color: #fff;
 }
 
 .contacts__media {
@@ -2354,16 +2359,6 @@ a {
   margin: 10px;
 }
 
-.partners__arrow {
-  position: absolute;
-  right: 20px;
-  top: -20px;
-}
-
-.partners__arrow img {
-  width: 60px;
-}
-
 .partners__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2379,6 +2374,18 @@ a {
 .partners_conteiner {
   padding: 10px 10px;
   margin: auto 0;
+}
+
+.to_top {
+  position: absolute;
+  right: 30px;
+  bottom: 350px;
+  position: fixed;
+  /* 	display: none; */
+}
+
+.to_top img {
+  width: 60px;
 }
 
 .footer {
@@ -2425,6 +2432,10 @@ a {
 .footer__contacts li {
   padding: 5px;
   list-style-type: disc;
+}
+
+.footer__contacts a {
+  color: #fff;
 }
 
 .footer__copyright {
