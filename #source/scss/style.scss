@@ -847,6 +847,7 @@ a {
 .modular__right img{
 	width: 625px;
 } 
+
 .support {
 	width: 100%;
 }
@@ -1540,10 +1541,11 @@ position: relative;
 	position: relative;
 }
 .to_top {
-	position: absolute;
+/* 	position: absolute; */
 	right: 30px;
 	bottom: 130px;
 	position: fixed;
+	z-index: 10;
 /* 	display: none; */
 }
 .to_top img{

@@ -2392,10 +2392,11 @@ a {
 }
 
 .to_top {
-  position: absolute;
+  /* 	position: absolute; */
   right: 30px;
   bottom: 130px;
   position: fixed;
+  z-index: 10;
   /* 	display: none; */
 }
 
